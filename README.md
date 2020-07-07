@@ -22,6 +22,9 @@ import NxGmXhr from '@feizheng/next-gm-xhr';
 
 ```
 
+## resources
+- https://www.tampermonkey.net/documentation.php#GM_xmlhttpRequest
+
 ## license
 Code released under [the MIT license](https://github.com/afeiship/next-gm-xhr/blob/master/LICENSE.txt).
 
