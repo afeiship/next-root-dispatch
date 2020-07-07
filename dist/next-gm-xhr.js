@@ -3,7 +3,7 @@
  * description: GM_xmlhttpRequest for next.
  * homepage: https://github.com/afeiship/next-gm-xhr
  * version: 1.0.0
- * date: 2020-07-07T06:20:51.145Z
+ * date: 2020-07-07T06:23:21.879Z
  * license: MIT
  */
 
@@ -33,7 +33,7 @@
         var body = isGET ? null : NxDataTransform[options.dataType](inData);
         var url = isGET ? nxParam(inData, inUrl) : inUrl;
         var headers = { 'Content-Type': nxContentType(options.dataType) };
-        var config = nxDeepAssign({ method: inMethod, body: body, headers: headers }, options);
+        var config = nxDeepAssign({ method: inMethod, data: body, headers: headers }, options);
 
         return new Promise(function (resolve, reject) {
           GM_xmlhttpRequest(
