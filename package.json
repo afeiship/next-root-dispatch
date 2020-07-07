@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/next-gm-xhr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GM_xmlhttpRequest for next.",
   "homepage": "https://github.com/afeiship/next-gm-xhr",
   "author": {

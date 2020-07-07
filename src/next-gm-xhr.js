@@ -36,6 +36,9 @@
               onerror: function (err) {
                 reject(err);
               },
+              onabort: function (err) {
+                reject(err);
+              },
               ontimeout: function (err) {
                 reject(err);
               }
