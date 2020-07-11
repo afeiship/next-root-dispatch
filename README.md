@@ -12,14 +12,21 @@ npm install -S @feizheng/next-gm-xhr
 ```
 
 ## apis
-| api | params | description   |
-|-----|--------|---------------|
-| get | -      | desc balabala |
+| api    | params | description |
+| ------ | ------ | ----------- |
+| get    | -      | -           |
+| post   | -      | -           |
+| put    | -      | -           |
+| delete | -      | -           |
 
 ## usage
 ```js
 import NxGmXhr from '@feizheng/next-gm-xhr';
 
+// basic usage:
+NxGmXhr.get('https://api.github.com/users/afeiship', { timeout: 3000 }).then(res=>{
+  console.log(res);
+});
 ```
 
 ## resources
