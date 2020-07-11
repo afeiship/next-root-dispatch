@@ -23,8 +23,10 @@ npm install -S @feizheng/next-gm-xhr
 ```js
 import NxGmXhr from '@feizheng/next-gm-xhr';
 
+const options = { timeout: 3000, /* ... */ };
+
 // basic usage:
-NxGmXhr.get('https://api.github.com/users/afeiship', { timeout: 3000 }).then(res=>{
+NxGmXhr.get('https://api.github.com/users/afeiship').then(res=>{
   console.log(res);
 });
 ```
