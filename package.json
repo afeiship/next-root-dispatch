@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/next-gm-xhr",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "GM_xmlhttpRequest for next.",
   "homepage": "https://github.com/afeiship/next-gm-xhr",
   "author": {
@@ -40,5 +40,13 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "next",
+    "gm",
+    "xhr",
+    "http",
+    "request",
+    "tampermonkey"
+  ]
 }
