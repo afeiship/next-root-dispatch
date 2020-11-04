@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/next-gm-xhr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GM_xmlhttpRequest for next.",
   "homepage": "https://github.com/afeiship/next-gm-xhr",
   "author": {
@@ -34,7 +34,7 @@
     "@feizheng/next-abstract-request": "^1.1.7",
     "@feizheng/next-content-type": "^1.1.4",
     "@feizheng/next-data-transform": "^1.1.2",
-    "@feizheng/next-deep-assign": "^1.2.0",
+    "@feizheng/next-deep-assign": "^1.2.1",
     "@feizheng/next-js-core2": "^2.6.0",
     "@feizheng/next-param": "^2.0.0"
   },
