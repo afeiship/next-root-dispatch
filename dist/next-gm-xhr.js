@@ -2,8 +2,8 @@
  * name: @feizheng/next-gm-xhr
  * description: GM_xmlhttpRequest for next.
  * homepage: https://github.com/afeiship/next-gm-xhr
- * version: 1.0.4
- * date: 2020-11-04T01:48:03.496Z
+ * version: 1.0.5
+ * date: 2020-11-04T01:49:59.528Z
  * license: MIT
  */
 
