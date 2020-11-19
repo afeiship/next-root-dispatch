@@ -3,7 +3,7 @@
  * description: GM_xmlhttpRequest for next.
  * homepage: https://github.com/afeiship/next-gm-xhr
  * version: 1.0.0
- * date: 2020-11-19 22:04:35
+ * date: 2020-11-19 22:08:05
  * license: MIT
  */
 

@@ -41,5 +41,13 @@
     "@jswork/next-data-transform": "^1.0.0",
     "@jswork/next-deep-assign": "^1.0.0",
     "@jswork/next-param": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "gm",
+    "xhr",
+    "http",
+    "request",
+    "tampermonkey"
+  ]
 }
