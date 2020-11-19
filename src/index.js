@@ -1,11 +1,11 @@
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
-  var NxDataTransform = nx.DataTransform || require('@feizheng/next-data-transform');
-  var NxAbstractRequest = nx.AbstractRequest || require('@feizheng/next-abstract-request');
-  var nxContentType = nx.contentType || require('@feizheng/next-content-type');
-  var nxDeepAssign = nx.deepAssign || require('@feizheng/next-deep-assign');
-  var nxParam = nx.param || require('@feizheng/next-param');
+  var nx = global.nx || require('@jswork/next');
+  var NxDataTransform = nx.DataTransform || require('@jswork/next-data-transform');
+  var NxAbstractRequest = nx.AbstractRequest || require('@jswork/next-abstract-request');
+  var nxContentType = nx.contentType || require('@jswork/next-content-type');
+  var nxDeepAssign = nx.deepAssign || require('@jswork/next-deep-assign');
+  var nxParam = nx.param || require('@jswork/next-param');
 
   var DEFAULT_OPTIONS = {
     dataType: 'json',
@@ -28,23 +28,20 @@
 
         return new Promise(function (resolve, reject) {
           GM_xmlhttpRequest(
-            nx.mix({
-              url: url,
-              onload: function (res) {
-                resolve(res.response);
+            nx.mix(
+              {
+                url: url,
+                onload: function (res) {
+                  resolve(res.response);
+                },
+                onerror: reject,
+                onabort: reject,
+                ontimeout: reject
               },
-              onerror: function (err) {
-                reject(err);
-              },
-              onabort: function (err) {
-                reject(err);
-              },
-              ontimeout: function (err) {
-                reject(err);
-              }
-            }, config)
+              config
+            )
           );
-        })
+        });
       }
     }
   });
