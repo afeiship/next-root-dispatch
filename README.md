@@ -21,7 +21,7 @@ npm install -S @jswork/next-gm-xhr
 
 ## usage
 ```js
-import NxGmXhr from '@feizheng/next-gm-xhr';
+import NxGmXhr from '@jswork/next-gm-xhr';
 
 const options = { timeout: 3000, /* ... */ };
 
