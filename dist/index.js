@@ -2,13 +2,13 @@
  * name: @jswork/next-gm-xhr
  * description: GM_xmlhttpRequest for next.
  * homepage: https://github.com/afeiship/next-gm-xhr
- * version: 1.0.0
- * date: 2020-11-19 22:08:05
+ * version: 1.0.1
+ * date: 2021-01-06 22:22:38
  * license: MIT
  */
 
 (function () {
-  var global = global || this || window || Function('return this')();
+  var global = global || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var NxDataTransform = nx.DataTransform || require('@jswork/next-data-transform');
   var NxAbstractRequest = nx.AbstractRequest || require('@jswork/next-abstract-request');
