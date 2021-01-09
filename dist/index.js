@@ -2,8 +2,8 @@
  * name: @jswork/next-gm-xhr
  * description: GM_xmlhttpRequest for next.
  * homepage: https://github.com/afeiship/next-gm-xhr
- * version: 1.0.1
- * date: 2021-01-06 22:22:38
+ * version: 1.0.2
+ * date: 2021-01-09 16:24:47
  * license: MIT
  */
 
