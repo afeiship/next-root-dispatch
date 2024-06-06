@@ -1,7 +1,7 @@
 require('../src');
 
 describe('api.basic test', () => {
-  test('nx.boilerplatePackage', function () {
-    console.log('hello next');
+  test('nx.rootDispatch exist', function () {
+    expect(typeof nx.rootDispatch).toBe('function');
   });
 });
