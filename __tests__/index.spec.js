@@ -1,10 +1,7 @@
-(function() {
-  const NxGmXhr = require('../src');
+require('../src');
 
-  describe('NxGmXhr.methods', function() {
-    test('init', function() {
-      const data = { key: 1, value: 2 };
-      expect(!!data).toBe(true);
-    });
+describe('api.basic test', () => {
+  test('nx.boilerplatePackage', function () {
+    console.log('hello next');
   });
-})();
+});

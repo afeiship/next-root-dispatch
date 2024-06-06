@@ -1,52 +1,13 @@
-(function () {
-  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
-  var nx = global.nx || require('@jswork/next');
-  var NxDataTransform = nx.DataTransform || require('@jswork/next-data-transform');
-  var NxAbstractRequest = nx.AbstractRequest || require('@jswork/next-abstract-request');
-  var nxContentType = nx.contentType || require('@jswork/next-content-type');
-  var nxDeepAssign = nx.deepAssign || require('@jswork/next-deep-assign');
-  var nxParam = nx.param || require('@jswork/next-param');
+import nx from '@jswork/next';
 
-  var DEFAULT_OPTIONS = {
-    dataType: 'json',
-    responseType: 'json'
-  };
+nx.rootDispatch = function(inName, inPayload) {
+  const payload = inPayload == null ? {} : { detail: inPayload };
+  const event = new CustomEvent(inName, payload);
+  return window.dispatchEvent(event);
+};
 
-  var NxGmXhr = nx.declare('nx.GmXhr', {
-    extends: NxAbstractRequest,
-    methods: {
-      defaults: function () {
-        return DEFAULT_OPTIONS;
-      },
-      request: function (inMethod, inUrl, inData, inOptions) {
-        var options = nx.mix(null, this.options, inOptions);
-        var isGET = inMethod === 'get';
-        var body = isGET ? null : NxDataTransform[options.dataType](inData);
-        var url = isGET ? nxParam(inData, inUrl) : inUrl;
-        var headers = { 'Content-Type': nxContentType(options.dataType) };
-        var config = nxDeepAssign({ method: inMethod, data: body, headers: headers }, options);
+if (typeof module !== 'undefined' && module.exports && typeof wx === 'undefined') {
+  module.exports = nx.rootDispatch;
+}
 
-        return new Promise(function (resolve, reject) {
-          GM_xmlhttpRequest(
-            nx.mix(
-              {
-                url: url,
-                onload: function (res) {
-                  resolve(res.response);
-                },
-                onerror: reject,
-                onabort: reject,
-                ontimeout: reject
-              },
-              config
-            )
-          );
-        });
-      }
-    }
-  });
-
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = NxGmXhr;
-  }
-})();
+export default nx.rootDispatch;

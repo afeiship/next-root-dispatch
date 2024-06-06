@@ -1,5 +1,5 @@
-# next-gm-xhr
-> GM_xmlhttpRequest for next.
+# next-root-dispatch
+> Shortcut for window.dispatchEvent.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
@@ -8,43 +8,33 @@
 
 ## installation
 ```bash
-npm install -S @jswork/next-gm-xhr
+yarn add @jswork/next-root-dispatch
 ```
-
-## apis
-| api    | params | description |
-| ------ | ------ | ----------- |
-| get    | -      | -           |
-| post   | -      | -           |
-| put    | -      | -           |
-| delete | -      | -           |
 
 ## usage
 ```js
-import NxGmXhr from '@jswork/next-gm-xhr';
+import '@jswork/next-root-dispatch';
 
-const options = { timeout: 3000, /* ... */ };
+// original usage
+window.dispatchEvent(new CustomEvent('resize'));
+window.dispatchEvent(new CustomEvent('my-event', { detail: { foo: 'bar' } }));
 
-// basic usage:
-NxGmXhr.get('https://api.github.com/users/afeiship').then(res=>{
-  console.log(res);
-});
+// shortcut usage
+nx.rootDispatch('resize');
+nx.rootDispatch('my-event', { foo: 'bar' });
 ```
 
-## resources
-- https://www.tampermonkey.net/documentation.php#GM_xmlhttpRequest
-
 ## license
-Code released under [the MIT license](https://github.com/afeiship/next-gm-xhr/blob/master/LICENSE.txt).
+Code released under [the MIT license](https://github.com/afeiship/next-root-dispatch/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@jswork/next-gm-xhr
-[version-url]: https://npmjs.org/package/@jswork/next-gm-xhr
+[version-image]: https://img.shields.io/npm/v/@jswork/next-root-dispatch
+[version-url]: https://npmjs.org/package/@jswork/next-root-dispatch
 
-[license-image]: https://img.shields.io/npm/l/@jswork/next-gm-xhr
-[license-url]: https://github.com/afeiship/next-gm-xhr/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/@jswork/next-root-dispatch
+[license-url]: https://github.com/afeiship/next-root-dispatch/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-gm-xhr
-[size-url]: https://github.com/afeiship/next-gm-xhr/blob/master/dist/next-gm-xhr.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-root-dispatch
+[size-url]: https://github.com/afeiship/next-root-dispatch/blob/master/dist/next-root-dispatch.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@jswork/next-gm-xhr
-[download-url]: https://www.npmjs.com/package/@jswork/next-gm-xhr
+[download-image]: https://img.shields.io/npm/dm/@jswork/next-root-dispatch
+[download-url]: https://www.npmjs.com/package/@jswork/next-root-dispatch
