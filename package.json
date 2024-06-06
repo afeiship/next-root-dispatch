@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-root-dispatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shortcut for window.dispatchEvent.",
   "homepage": "https://js.work",
   "files": [
@@ -53,5 +53,13 @@
     "src/**/*.{js,jsx}": [
       "npm run pretty"
     ]
-  }
+  },
+  "keywords": [
+    "next",
+    "custom-event",
+    "dispatch",
+    "emit",
+    "event",
+    "window"
+  ]
 }
