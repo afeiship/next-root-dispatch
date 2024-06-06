@@ -1,3 +1,3 @@
 interface NxStatic {
-  rootDispatch: (name: string, payload: any) => boolean;
+  rootDispatch: (name: string, payload?: Record<string, any>) => boolean;
 }
