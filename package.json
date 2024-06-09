@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-root-dispatch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shortcut for window.dispatchEvent.",
   "homepage": "https://js.work",
   "files": [
